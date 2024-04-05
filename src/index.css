@@ -41,6 +41,7 @@
 /* Border for visualizing elements, EXCEPT html and body */
 /* * {border: 1px solid salmon;} html, body { border: none; } */
 
+/* Body properties: */
 body {
     display: flex;
     flex-direction: column;
@@ -50,6 +51,7 @@ body {
     background-color: var(--white);
 }
 
+/* Floating container: */
 .float {
     display: flex;
     width: 600px;
@@ -64,6 +66,7 @@ body {
     width: 50%;
 }
 
+/* "Your Result" section: */
 .yourResult {
     display: inherit;
     flex-direction: column;
