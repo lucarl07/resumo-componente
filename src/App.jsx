@@ -1,30 +1,33 @@
 /*** APP COMPONENT ***/
+/* eslint-disable react/prop-types */
 
 const ScoreCircle = (props) => {
     return (
         <div className="scoreCircle">
-            <span className="correctQsts"></span>
-            <span className="allQsts"></span>
+            <span className="reachedScore">{props.reachedScore}</span>
+            <span className="maxScore">of {props.maxScore}</span>
         </div>
     );
 }
 
-const Results = (props) => {
+const Result = (props) => {
     return (
-        <div className="outResult">
-            <h2></h2>
-            <p className="outResultDesc"></p>
+        <div className="result">
+            <h2>{props.value}</h2>
+            <p className="resultDesc">
+                {props.description}
+            </p>
         </div>
     );
 }
 
 const Skill = (props) => {
     return (
-        <li className="skill" id="liReaction">
-            <h2>Reaction</h2>
+        <li className="skill" id={'li' + props.name}>
+            <h2>{props.name}</h2>
             <p className="score">
-                <span className="reachedScore"></span>
-                <span className="maxScore"></span>
+                <span className="reachedScore">{props.reachedScore} </span>
+                <span className="maxScore">/ {props.maxScore}</span>
             </p>
         </li>
     );
@@ -32,8 +35,8 @@ const Skill = (props) => {
 
 const Button = (props) => {
     return (
-        <button>
-            ...
+        <button className="btn" id={'btn' + props.value}>
+            {props.value}
         </button>
     );
 }
@@ -43,21 +46,23 @@ const App = () => {
         <section className="float">
             <aside className="yourResult">
                 <h1>Your Result</h1>
-                <ScoreCircle/>
-                <Results/>
+
+                <ScoreCircle reachedScore="76" maxScore="100"/>
+
+                <Result value="Great" description="You scored higher than 65% of people who have taken these tests."/>
             </aside>
 
             <aside className="summary">
                 <h1>Summary</h1>
 
                 <ul className="skillList">
-                    <Skill/>
-                    <Skill/>
-                    <Skill/>
-                    <Skill/>
+                    <Skill name="Reaction" reachedScore="80" maxScore="100"/>
+                    <Skill name="Memory" reachedScore="92" maxScore="100"/>
+                    <Skill name="Verbal" reachedScore="61" maxScore="100"/>
+                    <Skill name="Visual" reachedScore="72" maxScore="100"/>
                 </ul>
 
-                <Button/>
+                <Button value="Continue"/>
             </aside>
         </section>
     );
