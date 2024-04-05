@@ -7,8 +7,5 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div style={{width: '500px', height: '500px', backgroundColor: 'var(--light-red)'}}>
-      Lorem ipsum dolor sit amet.
-    </div>
   </React.StrictMode>,
 )
