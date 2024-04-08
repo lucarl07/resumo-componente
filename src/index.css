@@ -107,3 +107,31 @@ body {
     font-size: 16px;
     color: var(--light-lavender);
 }
+
+/* "Summary" section: */
+.summary {
+    display: inherit;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.summary h1 {
+    color: var(--dark-gray-blue);
+}
+.summary .skillList {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 0.25rem;
+    list-style-type: none;
+}
+.summary .skillList .skill {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 52px;
+    background-color: rgb(208, 228, 225);
+    border-radius: 0.5rem;
+}
+.summary .skillList .skill h2 {
+    font-size: 1rem;
+}
