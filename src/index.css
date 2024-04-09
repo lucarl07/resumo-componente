@@ -6,6 +6,12 @@
     --green-teal: hsl(166, 100%, 37%);
     --cobalt-blue: hsl(234, 85%, 45%);
 
+    /* Background colors (skills): */
+    --bg-light-red: hsla(0, 100%, 67%, 0.1);
+    --bg-orangey-yellow: hsla(39, 100%, 56%, 0.1);
+    --bg-green-teal: hsla(166, 100%, 37%, 0.1);
+    --bg-cobalt-blue: hsla(234, 85%, 45%, 0.1);
+
     /* Gradient colors (background): */
     --light-slate-blue: hsl(252, 100%, 67%);
     --light-royal-blue: hsl(241, 81%, 54%);
@@ -129,9 +135,21 @@ body {
     align-items: center;
     padding: 1rem;
     height: 52px;
-    background-color: rgb(208, 228, 225);
     border-radius: 0.5rem;
 }
 .summary .skillList .skill h2 {
     font-size: 1rem;
+}
+.summary .skillList .skill div {
+    display: inherit;
+    gap: 0.75rem;
+}
+.summary .skillList .skill span {
+    font-weight: 700;
+}
+.summary .skillList .skill .reachedScore {
+    color: var(--dark-gray-blue);
+}
+.summary .skillList .skill .maxScore {
+    color: rgb(175, 175, 175);
 }
